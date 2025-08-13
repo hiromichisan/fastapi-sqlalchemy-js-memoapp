@@ -14,7 +14,7 @@ base_dir = os.path.dirname(__file__)
 DATABASE_URL = 'sqlite+aiosqlite:///' + os.path.join(base_dir, 'memodb.sqlite')
 
 # 非同期エンジンの作成
-engine = create_async_engine(DATABASE_URL, echo=True)
+engine = create_async_engine(DATABASE_URL, echo=False)
 
 # 非同期セッションの設定
 async_session = sessionmaker(
